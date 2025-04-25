@@ -3,11 +3,7 @@ import { ProfileProps } from "../types/profiles";
 //service to recieve profiles data from GitHub API
 export async function fetchProfile(name: string): Promise<ProfileProps | null> {
     try {
-      const res = await fetch(`https://api.github.com/users/${name}`, {
-        headers: {
-          Authorization: `Bearer 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`,
-        },
-      });
+      const res = await fetch(`https://api.github.com/users/${name}`);
   
       if (!res.ok) return null;
   
