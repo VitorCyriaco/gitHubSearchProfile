@@ -1,54 +1,83 @@
-# React + TypeScript + Vite
+# 🔍 GitHub Profile Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação React simples onde o usuário pode pesquisar o nome de um perfil do GitHub e visualizar suas informações públicas.
 
-Currently, two official plugins are available:
+## 🛠️ Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- API pública do GitHub
 
-## Expanding the ESLint configuration
+## 📦 Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone o repositório:
+```bash
+  git clone https://github.com/VitorCyriaco/gitHubSearchProfile.git
+```
+2. Acesse o diretório do projeto:
+```bash
+  cd gitHubSearchProfile
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+3. Instale as dependências:
+```bash
+   npm install
 ```
+
+4. Inicie o servidor de desenvolvimento:
+```bash
+   npm run dev
+```
+
+💡 Como Usar
+Digite o nome de usuário do GitHub no campo de pesquisa.
+
+Clique em "Buscar".
+
+O perfil será exibido com informações como avatar, bio, número de repositórios, seguidores e link para o GitHub.
+
+📷 Exemplo de Uso
+```bash
+   Pesquisar: VitorCyriaco
+  Resultado:
+
+  Avatar
+  Nome
+  Bio
+```
+
+📁 Estrutura de Pastas
+```bash
+  src/
+  ├── assets/
+  │     └── img/
+  ├── components/
+  │   ├── background/
+  │   │   └── background.tsx
+  │   └── gitPerfil/
+  │       ├── notFound/
+  │       │   └── index.tsx
+  │       └── index.tsx
+  ├── pages/
+  │   └── index.tsx
+  ├── services/
+  │   └── fetchProfile.ts
+  ├── types/
+  │   └── profiles.d.ts
+  ├── index.css
+  ├── main.tsx
+  └── vite-env.d.ts
+```
+
+🧩 Funcionalidades Futuras
+```bash
+Histórico de buscas recentes;
+Exibição de repositórios públicos.
+```
+
+🤝 Contribuindo
+```bash
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
+```
+
+Feito com 💙 por Vitor Cyriaco!
